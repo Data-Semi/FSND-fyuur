@@ -10,7 +10,8 @@
 			ID: {{ venue.id }}
 		</p>
 		<div class="genres">
-			{% for genre in venue.genres %}
+			{%set genres_list=venue.genres.split(',') %}
+			{% for genre in genres_list %}
 			<span class="genre">{{ genre }}</span>
 			{% endfor %}
 		</div>
@@ -52,8 +53,8 @@
 		{%for show in venue.upcoming_shows %}
 		<div class="col-sm-4">
 			<div class="tile tile-show">
-				<img src="{{ show.artist_image_link }}" alt="Show Artist Image" />
-				<h5><a href="/artists/{{ show.artist_id }}">{{ show.artist_name }}</a></h5>
+				<img src="{{ show.artist.first().image_link }}" alt="Show Artist Image" />
+				<h5><a href="/artists/{{ show.artist.first().id }}">{{ show.artist.first().name }}</a></h5>
 				<h6>{{ show.start_time|datetime('full') }}</h6>
 			</div>
 		</div>
@@ -66,8 +67,8 @@
 		{%for show in venue.past_shows %}
 		<div class="col-sm-4">
 			<div class="tile tile-show">
-				<img src="{{ show.artist_image_link }}" alt="Show Artist Image" />
-				<h5><a href="/artists/{{ show.artist_id }}">{{ show.artist_name }}</a></h5>
+				<img src="{{ show.artist.first().image_link }}" alt="Show Artist Image" />
+				<h5><a href="/artists/{{ show.artist.first().id }}">{{ show.artist.first().name }}</a></h5>
 				<h6>{{ show.start_time|datetime('full') }}</h6>
 			</div>
 		</div>
