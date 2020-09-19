@@ -283,10 +283,10 @@ def upgrade():
 
     upcomming_shows_data=[{
         "id": 1,
-        "start_time": "2035-04-15T20:00:00.000Z",
+        "start_time": "2035-04-01T20:00:00.000Z",
     },{
         "id": 2,
-        "start_time": "2035-04-15T20:00:00.000Z",
+        "start_time": "2035-04-08T20:00:00.000Z",
     },{        
         "id": 3,
         "start_time": "2035-04-15T20:00:00.000Z",
@@ -303,6 +303,12 @@ def upgrade():
     }]
     upcomming_shows_ven_assc_data=[{
         "shows_id":1,
+        "venue_id":3,
+    },{
+        "shows_id":2,
+        "venue_id":3,
+    },{
+        "shows_id":3,
         "venue_id":3,
     }]
 
