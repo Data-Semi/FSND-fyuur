@@ -209,6 +209,10 @@ def upgrade():
     op.bulk_insert(show_venue_assc,show_venue_assc_data)
     op.bulk_insert(show_artist_assc,show_artist_assc_data)
 
+    # to avoid sqlalchemy.exc.IntegrityError
+    op.execute("SELECT setval('venue_id_seq', (SELECT MAX(id) FROM venue));")
+    op.execute("SELECT setval('artist_id_seq', (SELECT MAX(id) FROM artist));")
+    op.execute("SELECT setval('show_id_seq', (SELECT MAX(id) FROM show));")
     # ### end Alembic commands ###
 
 

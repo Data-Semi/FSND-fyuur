@@ -19,7 +19,10 @@ search_term=request.form.get('search_term', '')
 解決できた：
 psqlでコマンドで解決
   #  postgresql=# select setval ('show_id_seq', (SELECT MAX(id) FROM show));
-
+もしくはmigrations/version/の中の fileで
+    op.execute("SELECT setval('venue_id_seq', (SELECT MAX(id) FROM venue));")
+    op.execute("SELECT setval('venue_id_seq', (SELECT MAX(id) FROM venue));")
+    op.execute("SELECT setval('venue_id_seq', (SELECT MAX(id) FROM venue));")
 --------
 The DB has 3 input already. 
 When I insert new dat to the db. there is 3 times error in the most first.<--- restart the DB, app?
