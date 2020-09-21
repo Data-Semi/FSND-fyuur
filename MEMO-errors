@@ -1,0 +1,47 @@
+-20200921---sqlalchemy.exc.IntegrityError---------------------------------------------------------------------------
+
+The DB has 3 input already. 
+When I insert new dat to the db. there is 3 times error in the most first.<--- restart the DB, app?
+press "post a venue " button in home page.
+------
+db.session.add(venue), is starting from id=1
+----------
+10.0.2.2 - - [20/Sep/2020 22:14:59] "GET / HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:168: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm()
+10.0.2.2 - - [20/Sep/2020 22:15:01] "GET /venues/create HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:175: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm(request.form)
+(<class 'sqlalchemy.exc.IntegrityError'>, IntegrityError('(psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "venue_pkey"\nDETAIL:  Key (id)=(1) already exists.\n',), <traceback object at 0x7fdaf152da48>)
+10.0.2.2 - - [20/Sep/2020 22:15:21] "POST /venues/create HTTP/1.1" 200 -
+10.0.2.2 - - [20/Sep/2020 22:15:23] "GET /venues HTTP/1.1"
+200 -
+10.0.2.2 - - [20/Sep/2020 22:15:28] "GET / HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:168: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm()
+10.0.2.2 - - [20/Sep/2020 22:15:30] "GET /venues/create HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:175: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm(request.form)
+(<class 'sqlalchemy.exc.IntegrityError'>, IntegrityError('(psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "venue_pkey"\nDETAIL:  Key (id)=(2) already exists.\n',), <traceback object at 0x7fdaf15c70c8>)
+10.0.2.2 - - [20/Sep/2020 22:15:48] "POST /venues/create HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:168: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm()
+10.0.2.2 - - [20/Sep/2020 22:16:23] "GET /venues/create HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:175: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm(request.form)
+(<class 'sqlalchemy.exc.IntegrityError'>, IntegrityError('(psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "venue_pkey"\nDETAIL:  Key (id)=(3) already exists.\n',), <traceback object at 0x7fdaf15cdb88>)
+10.0.2.2 - - [20/Sep/2020 22:17:07] "POST /venues/create HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:168: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm()
+10.0.2.2 - - [20/Sep/2020 22:17:10] "GET /venues/create HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:175: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm(request.form)
+10.0.2.2 - - [20/Sep/2020 22:17:27] "POST /venues/create HTTP/1.1" 200 -
+/vagrant/projects/1_fyyur/FSND-fyuur/app.py:175: FlaskWTFDeprecationWarning: "flask_wtf.Form" has been renamed to "FlaskForm" and will be removed in 1.0.
+  form = VenueForm(request.form)
+10.0.2.2 - - [20/Sep/2020 22:17:32] "POST /venues/create HTTP/1.1" 200 -
+10.0.2.2 - - [20/Sep/2020 22:17:34] "GET /venues HTTP/1.1"
+200 -
+10.0.2.2 - - [20/Sep/2020 22:17:36] "GET /venues/4 HTTP/1.1" 200 -
+
+-20200921---sqlalchemy.exc.IntegrityError---------------------------------------------------------------------------
