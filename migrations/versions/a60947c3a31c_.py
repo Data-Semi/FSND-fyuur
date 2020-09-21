@@ -210,7 +210,6 @@ def upgrade():
     op.bulk_insert(show_artist_assc,show_artist_assc_data)
 
     # ### end Alembic commands ###
-    # ### end Alembic commands ###
 
 
 def downgrade():
