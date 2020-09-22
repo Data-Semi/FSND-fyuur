@@ -1,5 +1,10 @@
 Fyyur
 -----
+This is a project of Full Stack Web Design nano-degree course in UDACITY.
+I have built out the data models to power the API endpoints for the Fyyur site by connecting to a PostgreSQL database for storing, querying, and creating information about artists and venues on Fyyur.
+
+Below is the contents of README.md of the starter code.
+-----
 
 ### Introduction
 
